@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Chat";
+}
+
+<div id="chat">
+    <div id="details">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <h1>Chat</h1>
+                </div>                 
+            </div>
+             <div class="stat row">
+                <form role="form" class="form-horizontal">
+                    <div class="col-xs-12 col-md-12">
+                        <div class="form-group">
+                            <label for="message" class="col-sm-5 control-label">Message</label>
+                            <div class="col-sm-7">                            
+                                @Html.TextBox("message", "", new { @class = "form-control" })
+                                @Html.Hidden("displayName")                            
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-xs-12 col-md-12">
+                        <div class="form-group">
+                            <label for="message" class="col-sm-5 control-label"></label>
+                            <div class="col-sm-7">
+                                <button id="sendmessage" value="Send" type="button" class="btn btn-success pull-left">Send</button>
+                            </div>
+                        </div>
+                    </div>                   
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts {
+
+    <script src="~/Scripts/jquery.signalR-2.2.1.min.js"></script>        
+    <script src="~/signalr/hubs"></script>
+    
+    <script>
+        $(function () {
+
+            toastr.options = {
+                "positionClass": "toast-bottom-center",
+                "showDuration": "300",
+                "hideDuration": "1000"
+            }
+
+            var chat = $.connection.chatHub;
+
+            chat.client.hello = function () {
+                toastr["info"]("", "Hello!")
+            };
+            
+            chat.client.message = function (message) {            
+                toastr["info"]("", message)
+            };
+                   
+            $('#message').focus();
+            
+            $.connection.hub.start().done(function () {
+
+                $('#sendmessage').click(function () {
+                    chat.server.send($('#message').val());
+                    $('#message').val('').focus();
+                });
+            });
+        });
+
+    </script>
+}

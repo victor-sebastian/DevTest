@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @System.Web.Optimization.Styles.Render("~/Content/css")
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto|Ubuntu" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/" title="Home">Home</a>
+                        </li>
+                         <li>
+                            <a href="@Url.Action("Create", "Home")" title="Create">Create</a>
+                        </li>
+                         <li>
+                            <a href="@Url.Action("Chat", "Home")" title="Chat">Chat</a>
+                        </li>
+                    </ul>
+                </div>
+            
+            </div>
+        </nav>
+    
+        <div id="main" class="clear-top">
+            @RenderBody()
+        </div>        
+    </div>
+
+    @System.Web.Optimization.Scripts.Render("~/bundles/jquery")
+    @System.Web.Optimization.Scripts.Render("~/bundles/bootstrap")
+    @System.Web.Optimization.Scripts.Render("~/bundles/others")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

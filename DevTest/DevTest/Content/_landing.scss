@@ -1,0 +1,43 @@
+#landing {
+	max-width: 1600px;
+    margin: 0 auto;
+	margin-top: 15vw;
+
+	#details {
+		
+		background: #fff;
+		font-family: Open Sans;
+		color: #935a24;
+		height: auto;
+		text-align: center;		
+		
+		h1 {			
+			font-size: 60px;
+			text-transform: uppercase;
+		}
+
+		.container-fluid {			
+
+			.row:nth-of-type(2) {
+				margin-top: 30px;
+			}
+		}
+
+		.stat {
+			div:nth-of-type(1) {
+				text-align: right;
+			}
+
+			div:nth-of-type(2) {
+				text-align: left;
+			}
+		}
+	}
+
+	.line-fade {
+		margin: 5px 0;
+		height: 1px;
+		background: black;
+		background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #fff));
+	}
+}

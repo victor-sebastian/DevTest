@@ -1,0 +1,114 @@
+﻿@model DevTest.Models.Character
+
+
+<div id="create">    
+
+
+    <div id="details">
+        @using(Html.BeginForm("Create", "Home"))
+        {
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <h1>Create a character</h1>
+                        <span>(Sample values are provided below)</span>
+                    </div>
+                 
+                </div>
+                <div class="stat row">
+                    <div class="col-xs-6 col-md-6">
+                        @Html.LabelFor(x => x.Name)
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                        @Html.TextBoxFor(x => x.Name)
+                        @Html.ValidationMessageFor(x => x.Name)
+                    </div>
+                </div>
+                <div class="stat row">
+                    <div class="col-xs-6 col-md-6">
+                        @Html.LabelFor(x => x.Race)
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                        @Html.TextBoxFor(x => x.Race)
+                        @Html.ValidationMessageFor(x => x.Race)
+                    </div>
+                </div>
+                <div class="stat row">
+                    <div class="col-xs-6 col-md-6">
+                        @Html.LabelFor(x => x.Gender)
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                        @Html.TextBoxFor(x => x.Gender)
+                        @Html.ValidationMessageFor(x => x.Gender)
+                    </div>
+                </div>
+                <div class="stat row">
+                    <div class="col-xs-6 col-md-6">
+                        @Html.LabelFor(x => x.HitPoints)
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                        @Html.TextBoxFor(x => x.HitPoints)
+                        @Html.ValidationMessageFor(x => x.HitPoints)
+                    </div>
+                </div>
+                <div class="stat row">
+                        <div class="col-xs-6 col-md-6">
+                            @Html.LabelFor(x => x.ManaPoints)
+                        </div>
+                    <div class="col-xs-6 col-md-6">
+                            @Html.TextBoxFor(x => x.ManaPoints)
+                            @Html.ValidationMessageFor(x => x.ManaPoints)
+                        </div>
+                    </div>            
+                <div class="stat row">
+                    <div class="col-xs-6 col-md-6">
+                        @Html.LabelFor(x => x.Strength)
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                        @Html.TextBoxFor(x => x.Strength)
+                        @Html.ValidationMessageFor(x => x.Strength)
+                    </div>
+                </div>
+                <div class="stat row">
+                    <div class="col-xs-6 col-md-6">
+                        @Html.LabelFor(x => x.Agility)
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                        @Html.TextBoxFor(x => x.Agility)
+                        @Html.ValidationMessageFor(x => x.Agility)
+                    </div>
+                </div>
+                <div class="stat row">
+                    <div class="col-xs-6 col-md-6">
+                        @Html.LabelFor(x => x.Stamina)
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                        @Html.TextBoxFor(x => x.Stamina)
+                        @Html.ValidationMessageFor(x => x.Stamina)
+                    </div>
+                </div>
+                <div class="stat row">
+                    <div class="col-xs-6 col-md-6">
+                        @Html.LabelFor(x => x.Intellect)
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                        @Html.TextBoxFor(x => x.Intellect)
+                        @Html.ValidationMessageFor(x => x.Intellect)
+                    </div>                    
+                </div>          
+                <div id="frmBtn" class="row">
+                    <div class="col-xs-6 col-md-6">                        
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                        <button type="submit" class="btn btn-success pull-left">Create</button>
+                    </div>
+                </div>    
+
+            </div>
+        }
+    </div>
+</div>
+
+@section scripts {
+
+}

@@ -1,0 +1,115 @@
+﻿@model DevTest.Models.Character
+
+
+<div id="landing">    
+
+
+    <div id="details">
+
+        @if (Model.CharacterId == Guid.Empty)
+        {
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <h1>No Characters!</h1>
+                    </div>                 
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <a href="@Url.Action("Create", "Home")" class="btn btn-primary">Click here to create one</a>
+                    </div>                 
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <h1>Character</h1>
+                        <span>(This is the last character created)</span>
+                    </div>
+                 
+                </div>
+            <div class="stat row">
+                <div class="col-xs-6 col-md-6">
+                    @Html.LabelFor(x => x.Name)
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    @Model.Name
+                </div>
+            </div>
+            <div class="stat row">
+                <div class="col-xs-6 col-md-6">
+                    @Html.LabelFor(x => x.Race)
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    @Model.Race
+                </div>
+             </div>
+            <div class="stat row">
+                <div class="col-xs-6 col-md-6">
+                    @Html.LabelFor(x => x.Gender)
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    @Model.Gender
+                </div>
+             </div>
+            
+            <div class="stat row">
+                <div class="col-xs-6 col-md-6">
+                    @Html.LabelFor(x => x.HitPoints)
+                </div>
+                <div class="col-xs-6 col-md-6">
+                     @Model.HitPoints / @Model.HitPoints
+                </div>
+             </div>
+            <div class="stat row">
+                  <div class="col-xs-6 col-md-6">
+                     @Html.LabelFor(x => x.ManaPoints)
+                  </div>
+                <div class="col-xs-6 col-md-6">
+                     @Model.ManaPoints
+                  </div>
+             </div>
+            <div class="stat row">
+                <div class="col-xs-6 col-md-6">
+                    @Html.LabelFor(x => x.Strength)
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    @Model.Strength
+                </div>
+            </div>
+            <div class="stat row">
+                <div class="col-xs-6 col-md-6">
+                    @Html.LabelFor(x => x.Agility)
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    @Model.Agility
+                </div>
+            </div>
+            <div class="stat row">
+                <div class="col-xs-6 col-md-6">
+                    @Html.LabelFor(x => x.Stamina)
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    @Model.Stamina
+                </div>
+            </div>
+            <div class="stat row">
+                <div class="col-xs-6 col-md-6">
+                    @Html.LabelFor(x => x.Intellect)
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    @Model.Intellect
+                </div>
+            </div>               
+        </div>
+        }
+        
+    </div>
+</div>
+
+@section scripts {
+
+}

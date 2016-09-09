@@ -1,0 +1,48 @@
+#landing #details {
+  background: -webkit-linear-gradient(#fbd504, #D47D24);
+  background: -o-linear-gradient(#fbd504, #D47D24);
+  background: -moz-linear-gradient(#fbd504, #D47D24);
+  background: linear-gradient(#fbd504, #D47D24);
+  height: 75vh;
+  text-align: center; }
+  #landing #details h1 {
+    color: rgba(28, 13, 10, 0.9);
+    font-family: Opensans-Bold;
+    font-size: 60px;
+    text-transform: uppercase; }
+  #landing #details h2 {
+    color: rgba(28, 13, 10, 0.9);
+    font-family: Quicksand;
+    font-size: 28px; }
+  #landing #details .container-fluid .row:nth-of-type(1) {
+    margin-top: 15vw; }
+  #landing #details .container-fluid .row:nth-of-type(2) {
+    margin-top: 30px;
+    max-width: 70vw;
+    margin: 0 auto; }
+#landing #rsvp {
+  background: url("images/anne-victor/002.jpg") no-repeat;
+  height: 75vh;
+  text-align: center; }
+  #landing #rsvp h1 {
+    color: rgba(28, 13, 10, 0.9);
+    font-family: Opensans-Bold;
+    font-size: 60px;
+    text-transform: uppercase; }
+  #landing #rsvp h2 {
+    color: rgba(28, 13, 10, 0.9);
+    font-family: Quicksand;
+    font-size: 28px; }
+  #landing #rsvp .container-fluid .row:nth-of-type(1) {
+    margin-top: 10vw; }
+  #landing #rsvp .container-fluid .row:nth-of-type(2) {
+    margin-top: 30px;
+    max-width: 70vw;
+    margin: 0 auto; }
+#landing .line-fade {
+  margin: 5px 0;
+  height: 1px;
+  background: black;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #fff)); }
+
+/*# sourceMappingURL=landing.css.map */

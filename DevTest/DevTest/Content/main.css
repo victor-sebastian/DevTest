@@ -1,0 +1,178 @@
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  margin: 0 auto; }
+
+.navbar {
+  min-height: 185px;
+  margin: 0;
+  border: 0; }
+
+#wrapper #main {
+  background: #feffff; }
+
+#mainNav {
+  min-height: 50px;
+  background: #5dc1e9; }
+  #mainNav .navbar-brand {
+    height: 105px; }
+    #mainNav .navbar-brand img {
+      max-width: 100%;
+      max-height: 100%; }
+  #mainNav .navbar-brand, #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+    text-transform: uppercase;
+    color: #3b3a36; }
+  #mainNav .navbar-nav > li {
+    line-height: 105px; }
+    #mainNav .navbar-nav > li > a {
+      display: inline-block;
+      padding-top: 0;
+      padding-bottom: 0; }
+  #mainNav .navbar-nav > li, #mainNav .navbar-nav > li > a, #mainNav .navbar-nav > li > a:hover, #mainNav .navbar-nav > li > a:focus {
+    font-family: Ubuntu;
+    color: #ffffff;
+    font-size: 1.5em; }
+
+.footer {
+  background-color: #312c32;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  margin-top: -100px;
+  /* negative value of footer height. directly related to #main padding-bottom */
+  height: 100px;
+  clear: both; }
+
+.vertical-center {
+  min-height: 100%;
+  /* Fallback for vh unit */
+  /*min-height: 100vh;*/
+  	                       /* You might also want to use
+  							'height' property instead.
+                          
+  							Note that for percentage values of
+  							'height' or 'min-height' properties,
+  							the 'height' of the parent element
+  							should be specified explicitly.
+    
+  							In this case the parent of '.vertical-center'
+  							is the <body> element */
+  /* Make it a flex container */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  /* Align the bootstrap's container vertically */
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /* In legacy web browsers such as Firefox 9
+  	we need to specify the width of the flex container */
+  width: 100%;
+  	/* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
+  		hence the bootstrap's container won't be aligned to the center anymore.
+    
+  		Therefore, we should use the following declarations to get it centered again */
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center; }
+
+.divider {
+  margin: 25px 0;
+  height: 1px;
+  background: black;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(#feffff), to(#feffff), color-stop(50%, #4f4f4f)); }
+
+#wrapper {
+  min-height: 100%; }
+
+#main {
+  overflow: auto;
+  /*padding-bottom: 100px;*/
+  /* this needs to be bigger than footer height*/ }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .visible-md-inline {
+    display: inline !important; } }
+#landing {
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-top: 15vw; }
+  #landing #details {
+    background: #fff;
+    font-family: Open Sans;
+    color: #935a24;
+    height: auto;
+    text-align: center; }
+    #landing #details h1 {
+      font-size: 60px;
+      text-transform: uppercase; }
+    #landing #details .container-fluid .row:nth-of-type(2) {
+      margin-top: 30px; }
+    #landing #details .stat div:nth-of-type(1) {
+      text-align: right; }
+    #landing #details .stat div:nth-of-type(2) {
+      text-align: left; }
+  #landing .line-fade {
+    margin: 5px 0;
+    height: 1px;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #fff)); }
+
+#create {
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-top: 15vw; }
+  #create #details {
+    background: #fff;
+    font-family: Open Sans;
+    color: #935a24;
+    height: auto;
+    text-align: center; }
+    #create #details h1 {
+      font-size: 60px;
+      text-transform: uppercase; }
+    #create #details .container-fluid .row:nth-of-type(2) {
+      margin-top: 30px; }
+    #create #details .stat div:nth-of-type(1) {
+      text-align: right; }
+    #create #details .stat div:nth-of-type(2) {
+      text-align: left; }
+    #create #details #frmBtn {
+      margin-top: 20px; }
+  #create .line-fade {
+    margin: 5px 0;
+    height: 1px;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #fff)); }
+
+#chat {
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-top: 15vw; }
+  #chat #details {
+    background: #fff;
+    font-family: Open Sans;
+    color: #935a24;
+    height: auto;
+    text-align: center; }
+    #chat #details h1 {
+      font-size: 60px;
+      text-transform: uppercase; }
+    #chat #details .container-fluid .row:nth-of-type(2) {
+      margin-top: 30px; }
+    #chat #details .stat div:nth-of-type(1) {
+      text-align: right; }
+    #chat #details .stat div:nth-of-type(2) {
+      text-align: left; }
+    #chat #details #message {
+      max-width: 400px; }
+
+/*# sourceMappingURL=main.css.map */
